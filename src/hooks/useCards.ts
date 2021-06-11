@@ -1,6 +1,6 @@
-import {GetCards} from '@cll.rest/core';
-import {Card} from '@cll.rest/types';
-import {useCallback, useEffect, useState} from 'react';
+import { GetCards } from '@cll.rest/core';
+import { Card } from '@cll.rest/types';
+import { useCallback, useEffect, useState } from 'react';
 
 type UseCardsProp = {
   loadCards: () => void;

@@ -1,6 +1,6 @@
-import {GetBrands} from '@cll.rest/core';
-import {Brand} from '@cll.rest/types';
-import {useCallback, useEffect, useState} from 'react';
+import { GetBrands } from '@cll.rest/core';
+import { Brand } from '@cll.rest/types';
+import { useCallback, useEffect, useState } from 'react';
 
 type UseBrandsProp = {
   loadBrands: () => void;

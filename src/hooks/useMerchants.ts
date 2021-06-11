@@ -1,6 +1,6 @@
-import {GetMerchants} from '@cll.rest/core';
-import {Merchant} from '@cll.rest/types';
-import {useCallback, useEffect, useState} from 'react';
+import { GetMerchants } from '@cll.rest/core';
+import { Merchant } from '@cll.rest/types';
+import { useCallback, useEffect, useState } from 'react';
 
 type UseMerchantsProp = {
   loadMerchants: () => void;
