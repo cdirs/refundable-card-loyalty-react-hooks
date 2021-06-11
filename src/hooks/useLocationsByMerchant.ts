@@ -9,14 +9,14 @@ type UseLocationsProp = {
   error: string | undefined;
 };
 
-export const useLocations = (initialValue: Location[] = []): UseLocationsProp => {
+export const useLocations = (apikey: string, merchantId: string, initialValue: Location[] = []): UseLocationsProp => {
   const [locations, setLocations] = useState<Location[]>(initialValue);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
   const updateLocations = (pageNumber: number = 1) => {
     setLoading(true);
-    GetLocationsByMerchant('', '')
+    GetLocationsByMerchant(apikey, merchantId)
       .then((res) => setLocations(res))
       .then(() => setLoading(false))
       .catch((e) => {

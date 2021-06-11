@@ -9,14 +9,14 @@ type UseCardsProp = {
   error: string | undefined;
 };
 
-export const useCards = (initialValue: Card[] = []): UseCardsProp => {
+export const useCards = (apikey: string, userId: string, initialValue: Card[] = []): UseCardsProp => {
   const [cards, setCards] = useState<Card[]>(initialValue);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
   const updateCards = (pageNumber: number = 1) => {
     setLoading(true);
-    GetCards('', '')
+    GetCards(apikey, userId)
       .then((res) => setCards(res))
       .then(() => setLoading(false))
       .catch((e) => {

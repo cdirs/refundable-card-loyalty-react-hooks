@@ -9,14 +9,14 @@ type UseBrandsProp = {
   error: string | undefined;
 };
 
-export const useBrands = (initialValue: Brand[] = []): UseBrandsProp => {
+export const useBrands = (apikey: string, initialValue: Brand[] = []): UseBrandsProp => {
   const [brands, setBrands] = useState<Brand[]>(initialValue);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
   const updateBrands = (pageNumber: number = 1) => {
     setLoading(true);
-    GetBrands('')
+    GetBrands(apikey)
       .then((res) => setBrands(res))
       .then(() => setLoading(false))
       .catch((e) => {

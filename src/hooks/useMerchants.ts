@@ -9,14 +9,14 @@ type UseMerchantsProp = {
   error: string | undefined;
 };
 
-export const useMerchants = (initialValue: Merchant[] = []): UseMerchantsProp => {
+export const useMerchants = (apikey: string, initialValue: Merchant[] = []): UseMerchantsProp => {
   const [merchants, setMerchants] = useState<Merchant[]>(initialValue);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
   const updateMerchants = (pageNumber: number = 1) => {
     setLoading(true);
-    GetMerchants('')
+    GetMerchants(apikey)
       .then((res) => setMerchants(res))
       .then(() => setLoading(false))
       .catch((e) => {
