@@ -1,6 +1,6 @@
-import {GetTransactions} from '@cll.rest/core';
-import {Transaction} from '@cll.rest/types';
-import {useCallback, useEffect, useState} from 'react';
+import { GetTransactions } from '@cll.rest/core';
+import { Transaction } from '@cll.rest/types';
+import { useCallback, useEffect, useState } from 'react';
 
 type UseTransactionsProp = {
   loadTransactions: () => void;
