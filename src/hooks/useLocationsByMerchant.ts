@@ -1,6 +1,6 @@
-import {GetLocationsByMerchant} from '@cll.rest/core';
-import {Location} from '@cll.rest/types';
-import {useCallback, useEffect, useState} from 'react';
+import { GetLocationsByMerchant } from '@cll.rest/core';
+import { Location } from '@cll.rest/types';
+import { useCallback, useEffect, useState } from 'react';
 
 type UseLocationsProp = {
   loadLocations: () => void;
