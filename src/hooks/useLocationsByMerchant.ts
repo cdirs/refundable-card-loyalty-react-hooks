@@ -1,6 +1,6 @@
-import { GetLocationsByMerchant } from '@cll.rest/core';
-import { Location } from '@cll.rest/types';
-import { useCallback, useEffect, useState } from 'react';
+import {GetLocationsByMerchant} from '@cll.rest/core';
+import {Location} from '@cll.rest/types';
+import {useCallback, useEffect, useState} from 'react';
 
 type UseLocationsProp = {
   loadLocations: () => void;
@@ -9,7 +9,11 @@ type UseLocationsProp = {
   error: string | undefined;
 };
 
-export const useLocations = (apikey: string, merchantId: string, initialValue: Location[] = []): UseLocationsProp => {
+export const useLocationsByMerchant = (
+  apikey: string,
+  merchantId: string,
+  initialValue: Location[] = [],
+): UseLocationsProp => {
   const [locations, setLocations] = useState<Location[]>(initialValue);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | undefined>(undefined);

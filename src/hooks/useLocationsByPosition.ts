@@ -1,6 +1,6 @@
-import { GetLocationsByPosition } from '@cll.rest/core';
-import { Location } from '@cll.rest/types';
-import { useCallback, useEffect, useState } from 'react';
+import {GetLocationsByPosition} from '@cll.rest/core';
+import {Location} from '@cll.rest/types';
+import {useCallback, useEffect, useState} from 'react';
 
 type UseLocationsProp = {
   loadLocations: () => void;
@@ -9,7 +9,7 @@ type UseLocationsProp = {
   error: string | undefined;
 };
 
-export const useLocations = (
+export const useLocationsByPosition = (
   apikey: string,
   longitude: number,
   latitude: number,
