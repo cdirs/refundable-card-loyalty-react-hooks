@@ -22,7 +22,7 @@
     "lib/**/*"
   ],
   "devDependencies": {
-    "@cll.rest/core": "^1.0.2",
+    "@cll.rest/core": "^1.0.3",
     "@cll.rest/types": "^1.0.19",
     "@types/react": "^17.0.5",
     "prettier": "^2.2.1",
@@ -32,7 +32,7 @@
     "typescript": "^4.3.2"
   },
   "peerDependencies": {
-    "@cll.rest/core": "^1.0.2",
+    "@cll.rest/core": "^1.0.3",
     "@cll.rest/types": "^1.0.19",
     "react": ">= 16.8.0"
   }

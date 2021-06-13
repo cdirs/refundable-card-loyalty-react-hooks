@@ -1,6 +1,6 @@
-import { GetLocationsByPosition } from '@cll.rest/core';
-import { Location } from '@cll.rest/types';
-import { useCallback, useEffect, useState } from 'react';
+import {GetLocationsByPosition} from '@cll.rest/core';
+import {Location} from '@cll.rest/types';
+import {useCallback, useEffect, useState} from 'react';
 
 type UseLocationsProp = {
   loadLocations: () => void;
@@ -19,9 +19,13 @@ export const useLocationsByPosition = (
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
-  const updateLocations = (pageNumber: number = 1) => {
+  const updateLocations = (
+    pageNumber: number = 1,
+    longitudeOverride: number = longitude,
+    latitudeOverride: number = latitude,
+  ) => {
     setLoading(true);
-    GetLocationsByPosition(apikey, longitude, latitude)
+    GetLocationsByPosition(apikey, longitudeOverride, latitudeOverride)
       .then((res) => setLocations(res))
       .then(() => setLoading(false))
       .catch((e) => {
