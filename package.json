@@ -18,6 +18,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "files": [
+    "lib/**/*"
+  ],
   "devDependencies": {
     "@cll.rest/core": "^1.0.2",
     "@cll.rest/types": "^1.0.19",
