@@ -1,6 +1,6 @@
-import {GetLocationsByPosition} from '@cll.rest/core';
-import {Location} from '@cll.rest/types';
-import {useCallback, useEffect, useState} from 'react';
+import { GetLocationsByPosition } from '@cll.rest/core';
+import { Location } from '@cll.rest/types';
+import { useCallback, useEffect, useState } from 'react';
 
 type UseLocationsProp = {
   loadLocations: (pageNumber: number, longitudeOverride: number, latitudeOverride: number) => void;
